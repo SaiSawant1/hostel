@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Admin Login</title> 
+</head> 
+<body background="Np.jpg"> 
+<form action="ad.php"method="POST"> 
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'> 
+<center><tr> 
+<td><a href="Home.html">Home</a></td> 
+<td align="center"><h1>*Notice*</h1></td> 
+</tr> 
+<center> 
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'> 
+<tr><hr><hr> 
+</tr> 
+</table> 
+</table></form></body><?php 
+$dbhost = "localhost"; 
+$dbuser = "root"; 
+$dbpass = ""; 
+$db = "test"; 
+$conn = new mysqli($dbhost, $dbuser, $dbpass,$db); $result 
+= mysqli_query($conn,"SELECT * FROM notice"); echo 
+"<table border='1'> 
+<tr> 
+<th>Date</th> 
+<th>Topic</th> 
+<th>Discription</th> 
+</tr>"; 
+while($row = mysqli_fetch_array($result)) 
+{ echo 
+"<tr>";
+echo "<td>" . $row['Date'] . "</td>"; 
+echo "<td>" . $row['topic'] . "</td>"; 
+echo "<td>" . $row['disc'] . "</td>"; 
+echo "</tr>"; } echo "</table>"; 
+$conn -> close(); 
+?></html>
