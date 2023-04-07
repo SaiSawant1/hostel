@@ -1,61 +1,65 @@
-<html> 
-<head><title>Boys hostel form</title></head> 
-<form action="frist"method="Get"> 
-<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'> 
-<center><tr> 
-&nbsp; 
-&nbsp; 
-<td align="center"><h1>Hostel Addmission form</h1></td> 
-</tr> 
-<center> 
-<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center'> 
-<tr><hr><hr> 
-<tr> <td>&nbsp;</td> </tr> 
- <td align='center'>Name:</td> 
- <td><input type='textbox' name='name' placeholder="Enter your Name"></td> </tr> 
-<tr> <td>&nbsp;</td> </tr> 
-<tr> 
-<td align='center'>Branch :</td> 
-<td> 
-<select name="Branch" id="Branch"> 
-<option value="CM">CM</option> 
-<option value="ME">ME</option> 
-<option value="CE">CE</option> 
-<option value="IT">IT</option> 
-<option value="EXTC">EXTC</option> 
-<option value="EE">EE</option> 
-</select> 
-</td> 
-<td align='center'>Year :</td> 
-<td> 
-<select name="Year" id="Year"> 
-<option value="1st">1st</option> 
-<option value="2nd">2nd</option> 
-<option value="3rd">3rd</option> 
-</select> 
-</td> 
-</tr> 
-<tr> <td>&nbsp;</td> </tr> 
-<tr> 
-<td align='center'>Address :</td> 
-<td><input type='textbox' name='Address' placeholder="Enter your address"></td> 
-</tr> 
-<tr> <td>&nbsp;</td> </tr> 
-<tr> 
-<td align='center'>Parents contact no.:</td> 
-<td><input type='textbox' name='pc' placeholder="Enter your parents no."></td> </tr> 
-<tr><td>&nbsp;</td></tr> 
-<tr> 
- <td align='center'>Student no.:</td> 
- <td><input type='text' name='phone' placeholder="Enter your phone No."></td> </tr> 
-<tr> <td>&nbsp;</td> </tr> 
-<tr> 
- <td align='center'>Email:</td> 
- <td><input type='text' name='email' placeholder="Enter your Email"></td> 
-</tr> 
-<tr> <td>&nbsp;</td> </tr> 
-<tr> 
-<td>&nbsp;</td> 
-<td > 
-<input type="submit"value="go"> 
-<td>&nbsp;</td> </td></tr></form></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="form-main">
+        <div class="form-container">
+            <h1>New Addmission Form</h1>
+            <form action="frist" method="Get">
+                <div class="form-control">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" id="name" name="Email" required>
+                    <label for="name">Email</label>
+                </div>
+                <div class="form-control-DOB">
+                    <input type="date" id="date" name="date" placeholder="">
+                    <label for="name">Date of Birth</label>
+                </div>
+                <div class="form-control-branch-year">
+                    <label for="Branch">Branch:</label>
+                    <select name="Branch" id="Branch">
+                        <option value="CM">CM</option>
+                        <option value="ME">ME</option>
+                        <option value="CE">CE</option>
+                        <option value="IT">IT</option>
+                        <option value="EXTC">EXTC</option>
+                        <option value="EE">EE</option>
+                      </select>
+                      <label for="Year">Year:</label>
+                      <select name="Year" id="Year">
+                        <option value="1st">1st</option>
+                        <option value="2nd">2nd</option>
+                        <option value="3rd">3rd</option>
+                      </select>
+                </div>
+                <div class="form-control">
+                    <input type="text" id="address" name="Address" required>
+                    <label for="Address">Address</label>
+                </div>
+                <div class="form-control">
+                    <input type="number" id="pc" name="pc" required>
+                    <label for="pc">Parent Phone No.</label>
+                </div>
+                <div class="form-control">
+                    <input type="number" id="phone" name="phone" required>
+                    <label for="phone">Stundent Phone No.</label>
+                </div>
+                <button class="form-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
